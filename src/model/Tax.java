@@ -10,4 +10,9 @@ public class Tax {
     ) {
         this.tax = tax;
     }
+
+    @Override
+    public String toString() {
+        return "{\"tax\": " + this.tax.toString() + "}";
+    }
 }
