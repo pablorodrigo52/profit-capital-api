@@ -1,15 +1,17 @@
 package src;
 
-import src.application.CapitalGainApplication;
+import src.service.CapitalGainService;
 
 public class Application {
-    
-    private static final CapitalGainApplication capitalGainApplication 
-        = new CapitalGainApplication();
 
-    public static void main (String[] args) {
-        System.out.println("--------------------- STARTING ---------------------");
-        capitalGainApplication.calculateTaxes();        
-        System.out.println("--------------------- ENDING ---------------------");
+    private static CapitalGainService capitalGainService = new CapitalGainService();
+
+    /**
+     * Main class. 
+     * @param args input arguments
+     * @throws Exception if an error occours
+     */
+    public static void main (String[] args) throws Exception {
+        capitalGainService.calculateTaxes();
     }
 }

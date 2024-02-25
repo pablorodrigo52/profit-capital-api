@@ -18,7 +18,7 @@ public class Operation {
         OperationType operation,
         BigDecimal unitCost,
         Long quantity
-    ) {
+    ) throws Exception {
         this.operation = operation;
         this.unitCost = unitCost;
         this.quantity = quantity;
@@ -39,20 +39,8 @@ public class Operation {
     @Override
     public String toString() {
         return "" 
-            + this.operation + " -> " 
-            + this.unitCost + " -> "
-            + this.quantity;
+            + " operation: " + this.operation + " -> " 
+            + " unit_cost: " + this.unitCost + " -> "
+            + " quantity: " + this.quantity + "\n";
     }
-
-    // public void setOperation(String operation) {
-    //     this.operation = operation;
-    // }
-    
-    // public void setUnitCost(BigDecimal unitCost) {
-    //     this.unitCost = unitCost;
-    // }
-    
-    // public void setQuantity(Long quantity) {
-    //     this.quantity = quantity;
-    // }
 }
