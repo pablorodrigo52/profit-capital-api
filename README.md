@@ -7,16 +7,16 @@ Olá esta é a minha implementação para o exercicio de **ganho de capital**.
 Para não escapar muito do tempo do projeto e por ser um problema relativamente complexo escolhi fazer o projeto em JAVA porque é a linguagem que mais tenho domínio. Na maior parte do projeto usei uma abordagem mais funcional do java usando streams (tentei mirar no clojure mas acho que ficou algo mais parecido com haskell).
 
 O projeto está estruturado da seguinte forma: 
-`/lib`
-|_ todas as bibliotecas necessárias para o projeto
-`/resources`
-|_ recursos gerais (classes compiladas e inputs existentes no pdf se encontram aqui)
-`/src`
-|_ código java
-`run_tests.sh`
-|_ runner para facilitar a compilar e executar os testes do projeto (unitários e integrados)
-`run.sh`
-|_ runner para facilitar a compilar e executar o projeto via command-line
+- `/lib`
+  |_ todas as bibliotecas necessárias para o projeto
+- `/resources`
+  |_ recursos gerais (classes compiladas e inputs existentes no pdf se encontram aqui)
+- `/src`
+  |_ código java
+- `run_tests.sh`
+  |_ runner para facilitar a compilar e executar os testes do projeto (unitários e integrados)
+- `run.sh`
+  |_ runner para facilitar a compilar e executar o projeto via command-line
 
 O padrão de arquitetura é simples, um service-model  onde a lógica da aplicação está dentro do pacote service e os dtos se apresentam no pacote model, ao redor desses dois pacotes existem algumas estruturas auxiliares para ajudar na resolução do problema.
 Falando um pouco mais sobre a arquitetura, implementei um strategy pattern dentro do serviço para cada tipo de operação (BUY, SELL). Achei interessante fazer assim por alguns motivos: 
